@@ -122,7 +122,7 @@ shinyServer(function(input, output){
     ## users follow you
     followers.fen = followers.info$name[sapply(followers$users, function(x) x$follow_me)]
     ## a group of users you may be familiar with
-    as.character(tags$h2("Maybe these are your peers? \n"))
+    cat("Maybe these are your peers? \n")
     fen.matrix = adjacency[followers.fen, followers.fen]
     fen.graph = graph.adjacency(fen.matrix, 'directed')
     fen.graph$name = followers.fen
