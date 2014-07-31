@@ -1,3 +1,6 @@
+if (!require(shiny)) install.packages('shiny')
+if (!require(recharts)) install.packages('recharts')
+
 require(shiny)
 require(recharts)
 
